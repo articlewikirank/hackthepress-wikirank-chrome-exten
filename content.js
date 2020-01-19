@@ -40,7 +40,8 @@ fetch("https://8491171d.ngrok.io/", {
     const sitesTable = document.createElement("table");
     sitesTable.classList.add("sitestable");
     const legend = document.createElement("tr");
-    legend.innerHTML = "<tr><th>Rank</th><th>Website</th></tr>";
+    legend.innerHTML =
+      '<tr><th class="ranking">Rank</th><th >Website</th></tr>';
     sitesTable.appendChild(legend);
     siteNamesArray.forEach(siteName => {
       const tableRow = document.createElement("tr");
@@ -48,7 +49,7 @@ fetch("https://8491171d.ngrok.io/", {
       if (siteName === requestURL)
         tableRow.classList.add("highlight-currentdomain");
       const ranking = document.createElement("td");
-      ranking.innerText = rankingObj[siteName];
+      ranking.innerText = rankingObj[siteName] + "/" + responseObj.maxrank;
       ranking.classList.add("ranking");
       const name = document.createElement("td");
       const namelink = document.createElement("a");
@@ -56,8 +57,8 @@ fetch("https://8491171d.ngrok.io/", {
       namelink.setAttribute("target", "_blank");
       namelink.innerText = siteName;
       name.appendChild(namelink);
-      tableRow.appendChild(name);
       tableRow.appendChild(ranking);
+      tableRow.appendChild(name);
       sitesTable.appendChild(tableRow);
       console.log(sitesTable);
       document.querySelector(".wikirankbar").appendChild(sitesTable);

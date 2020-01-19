@@ -76,7 +76,6 @@
   background-color: #51c9c2;
 }
 
-.sitestable td,
-.sitestable th {
-  font-family: "Montserrat", sans-serif;
+.ranking {
+  text-align: center;
 }
