@@ -7,5 +7,13 @@
     "default_popup": "./index.html",
     "default_title": "WikiRank",
     "default_icon": "./image.png"
-  }
+  },
+  "content_scripts": [
+    {
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "matches": ["https://*.theguardian.com/*"]
+    }
+  ],
+  "web_accessible_resources": ["images/*.png"]
 }
