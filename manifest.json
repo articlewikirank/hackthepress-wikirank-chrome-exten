@@ -12,7 +12,7 @@
     {
       "js": ["Readability.js", "content.js"],
       "css": ["content.css"],
-      "matches": ["https://*.theguardian.com/*"]
+      "matches": ["https://*/*"]
     }
   ],
   "web_accessible_resources": ["images/*.png"]
