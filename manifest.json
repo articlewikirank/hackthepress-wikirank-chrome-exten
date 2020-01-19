@@ -8,10 +8,6 @@
     "default_title": "WikiRank",
     "default_icon": "./images/WikiRankLogoSquare.png"
   },
-  "background": {
-    "scripts": ["background.js"],
-    "persistent": true
-  },
   "content_scripts": [
     {
       "js": ["Readability.js", "content.js"],

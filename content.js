@@ -47,8 +47,9 @@ fetch("https://8491171d.ngrok.io/", {
       tableRow.classList.add("site");
       if (siteName === requestURL)
         tableRow.classList.add("highlight-currentdomain");
-      const citationCount = document.createElement("td");
-      citationCount.innerText = rankingObj[siteName];
+      const ranking = document.createElement("td");
+      ranking.innerText = rankingObj[siteName];
+      ranking.classList.add("ranking");
       const name = document.createElement("td");
       const namelink = document.createElement("a");
       namelink.setAttribute("href", "https://" + siteName);
@@ -56,7 +57,7 @@ fetch("https://8491171d.ngrok.io/", {
       namelink.innerText = siteName;
       name.appendChild(namelink);
       tableRow.appendChild(name);
-      tableRow.appendChild(citationCount);
+      tableRow.appendChild(ranking);
       sitesTable.appendChild(tableRow);
       console.log(sitesTable);
       document.querySelector(".wikirankbar").appendChild(sitesTable);
