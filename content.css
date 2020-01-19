@@ -1,3 +1,8 @@
+@font-face {
+  font-family: myFirstFont;
+  src: url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+}
+
 .wikirankbar {
   width: 100vw;
   height: 20vh;
@@ -24,7 +29,7 @@
   width: 13px;
   height: 13px;
   border-radius: 50%;
-  background: #cef;
+  background: #51c9c2;
   animation-timing-function: cubic-bezier(0, 1, 1, 0);
 }
 .lds-ellipsis div:nth-child(1) {
@@ -66,4 +71,12 @@
   100% {
     transform: translate(24px, 0);
   }
+}
+.highlight-currentdomain {
+  background-color: #51c9c2;
+}
+
+.sitestable td,
+.sitestable th {
+  font-family: "Montserrat", sans-serif;
 }
