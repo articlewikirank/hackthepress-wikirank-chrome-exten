@@ -4,13 +4,13 @@
   "description": "Rank the credibility of news providers based on how often they appear in wikipedia citations ",
   "manifest_version": 2,
   "browser_action": {
-    "default_popup": "./index.html",
+    "default_popup": "./popup.html",
     "default_title": "WikiRank",
-    "default_icon": "./image.png"
+    "default_icon": "./images/WikiRankLogoSquare.png"
   },
   "content_scripts": [
     {
-      "js": ["content.js"],
+      "js": ["Readability.js", "content.js"],
       "css": ["content.css"],
       "matches": ["https://*.theguardian.com/*"]
     }
